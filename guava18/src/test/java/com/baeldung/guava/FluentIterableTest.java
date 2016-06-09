@@ -26,7 +26,12 @@ public class FluentIterableTest {
         users.add(new User(4L, "Bob", 10));
         users.add(new User(5L, "Bill", 65));
 
-        Predicate<User> byAge = input -> input.getAge() > ADULT_AGE;
+        Predicate<User> byAge = new Predicate<User>() {
+            @Override
+            public boolean apply(User input) {
+                return input.getAge() > ADULT_AGE;
+            }
+        };
 
         List<String> results = FluentIterable.from(users)
                 .filter(byAge)
