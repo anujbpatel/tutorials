@@ -23,7 +23,7 @@ import org.junit.Test;
 
 import com.alibaba.fastjson.JSON;
 
-public class ElasticSearchUnitTests {
+public class ElasticSearchUnitTest {
     private List<Person> listOfPersons = new ArrayList<Person>();
     String jsonString = null;
 
